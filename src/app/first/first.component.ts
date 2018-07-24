@@ -21,10 +21,13 @@ import { Component, OnInit } from '@angular/core';
 
 			<h3 class="text-success">DeveloperSTips</h3>
 			<h3 [class]="successClass">DeveloperSTips</h3>
-
 			<h3 [class.text-danger]="hasError">DeveloperSTips</h3>
-
 			<h3 [ngClass]="msgClasses">DeveloperSTips</h3>
+
+			<h3 [style.color]="hasError ? 'red' : 'green'">DeveloperSTips</h3>
+			<h3 [style.color]="hiLightColor">DeveloperSTips</h3>
+			<h3 [ngStyle]="myStyle">DeveloperSTips</h3>
+
 
 
 
@@ -57,6 +60,13 @@ export class FirstComponent implements OnInit {
 		"text-success": !this.hasError,
 		"text-danger" : this.hasError,
 		"text-special": this.isSpecial
+	}
+
+	public hiLightColor = "orange";
+	public myStyle = {
+		color: "blue",
+		fontStyle: "italic",
+		fontSize: '1.5em'
 	}
 
   constructor() { }
