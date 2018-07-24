@@ -10,6 +10,15 @@ import { Component, OnInit } from '@angular/core';
 			<h3>{{ greetUser() }}</h3>
 			<h3>{{ currentUrl }}</h3>
 			<h3>{{ 1+1+newVal() }}</h3>
+
+			<input type="text" [id]="myId"/>
+			<input type="text" id="{{myId}}"/><br><br>
+
+			<input type="text" disabled="{{false}}"/>
+			<input type="text" [disabled]="false"/><br><br>
+
+			<input type="text" [disabled]="isDisable"/>
+
   `,
   styles: [`
 		
@@ -18,8 +27,11 @@ import { Component, OnInit } from '@angular/core';
 export class FirstComponent implements OnInit {
 
 	public name = 'Srikrushna';
+	public myId = "testId";
 
 	public currentUrl = window.location.href;
+
+	public isDisable = false;
 
   constructor() { }
 
