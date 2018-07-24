@@ -28,9 +28,14 @@ import { Component, OnInit } from '@angular/core';
 			<h3 [style.color]="hiLightColor">DeveloperSTips</h3>
 			<h3 [ngStyle]="myStyle">DeveloperSTips</h3>
 
+			<button (click)="myEventFun()">Click Event</button>
+			<button (click)="myEventGreet()">Greet Event</button>
+			<button (click)="captureEvent($event)">Capture Event</button>
+			<button (click)="grretInline='Tutorial is available on http://developerstips.com/'">Template Statement</button>
 
-
-
+			<h3>{{ greetMsg }}</h3>
+			<h3>{{ eventType }}</h3>
+			<h3>{{ grretInline }}</h3>
   `,
   styles: [`
 		.text-success{
@@ -69,6 +74,9 @@ export class FirstComponent implements OnInit {
 		fontSize: '1.5em'
 	}
 
+	public greetMsg = "";
+	public eventType= "";
+
   constructor() { }
 
   ngOnInit() {
@@ -80,5 +88,16 @@ export class FirstComponent implements OnInit {
 
   newVal(){
   	return 3;
+  }
+
+  myEventFun(){
+  	console.log("Hey..! Button Clicked");
+  }
+  myEventGreet(){
+  	this.greetMsg = " Hey... Sri";
+  }
+  captureEvent(event){
+  	console.log(event);
+  	this.eventType = "New Event Type: "+ event.type;
   }
 }
