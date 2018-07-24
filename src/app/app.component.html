@@ -4,7 +4,10 @@
     Welcome to {{ title }}!
   </h1>
 </div>
+<h3>{{ msg }}</h3>
+
 <!-- <app-first></app-first> -->
 <!-- <app-second></app-second> -->
-<structural-directive></structural-directive>
+<!-- <structural-directive></structural-directive> -->
+<app-child (childEvevnt)="msg=$event" [parentData]="name"></app-child>
 <router-outlet></router-outlet>

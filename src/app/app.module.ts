@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     SecondComponent,
-    StructuralDirectiveComponent
+    StructuralDirectiveComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
