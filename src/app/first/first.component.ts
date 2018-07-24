@@ -2,8 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-first',
-  templateUrl: './first.component.html',
-  styleUrls: ['./first.component.scss']
+  template: `
+			<h3>Inline Temaplate Example</h3>
+  `,
+  styles: [`
+		h3{
+			color: green;
+		}
+  `]
 })
 export class FirstComponent implements OnInit {
 
