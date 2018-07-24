@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-second',
   template: `
-    /* hdhd */
     <input #myInput type="text" />
     <button (click)="trvFunc(myInput.value)">Template Ref Var</button>
     {{ input1 }}
