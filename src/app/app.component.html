@@ -4,12 +4,18 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<h3>{{ msg }}</h3>
+<!-- <h3>{{ msg }}</h3> -->
 
 <!-- <app-first></app-first> -->
 <!-- <app-second></app-second> -->
 <!-- <structural-directive></structural-directive> -->
 <!-- <app-child (childEvevnt)="msg=$event" [parentData]="name"></app-child> -->
-<app-employee-list></app-employee-list>
-<app-employee-detail></app-employee-detail>
+<!-- <app-employee-list></app-employee-list>
+<app-employee-detail></app-employee-detail> -->
+<h2><u>Routing and navigation</u></h2>
+<nav>
+	<a routerLink="departments" routerLinkActive="active">Departments</a>
+	<a routerLink="employees" routerLinkActive="active">Employees</a>
+</nav>
+
 <router-outlet></router-outlet>
