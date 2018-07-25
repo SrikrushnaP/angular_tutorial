@@ -8,6 +8,10 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
 import { ChildComponent } from './child/child.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+
+import { EmployeeService } from './employee.service'; 
 
 @NgModule({
   declarations: [
@@ -15,14 +19,16 @@ import { ChildComponent } from './child/child.component';
     FirstComponent,
     SecondComponent,
     StructuralDirectiveComponent,
-    ChildComponent
+    ChildComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
