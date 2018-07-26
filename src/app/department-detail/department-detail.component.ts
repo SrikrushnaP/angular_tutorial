@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, ParamMap } from  '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-department-detail',
@@ -8,6 +8,10 @@ import { ActivatedRoute, Router, ParamMap } from  '@angular/router';
     <div>
       <button (click)="goPrevious()">Previous</button>
       <button (click)="goNext()">Next</button>
+    </div>
+    <br>
+    <div>
+      <button (click)="goBackToDept()">Go Back</button>
     </div>
   `,
   styles: []
@@ -37,5 +41,10 @@ export class DepartmentDetailComponent implements OnInit {
   goNext(){
     let nextId = this.departmentId + 1;
     this.router.navigate(['/departments', nextId]);
+  }
+
+  goBackToDept(){
+    let selectedId = this.departmentId ? this.departmentId : null;
+    this.router.navigate(['/departments', {id: selectedId}]);
   }
 }
